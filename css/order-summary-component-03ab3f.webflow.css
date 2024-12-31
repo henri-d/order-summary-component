@@ -119,7 +119,9 @@
 
 .plan-text-wrapper {
   flex-flow: column;
+  justify-content: flex-start;
   align-self: auto;
+  align-items: flex-start;
   display: flex;
 }
 
