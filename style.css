@@ -54,6 +54,59 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  background: #e0e8ff url(img/pattern-background-desktop.svg);
+  background-position: top;
+  background-repeat: repeat-x;
+  min-height: 100vh;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-card {
+  background-color: #fff;
+  max-width: 45rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.order-card__img-box img {
+  width: 100%;
+}
+
+.order-card__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 4.8rem 4.8rem 4.3rem 4.8rem;
+}
+
+.order-card__plan {
+  display: flex;
+  align-items: center;
+  padding: 2.4rem;
+  gap: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.order-card__plan-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-card__link--change {
+  margin-left: auto;
+}
+
+.order-card__btn--payment {
+  margin-bottom: 1.6rem;
+}
+
 /* .attribution {
   font-size: 11px;
   text-align: center;
