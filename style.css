@@ -64,6 +64,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 .order-card {
@@ -71,7 +72,11 @@ body {
   max-width: 45rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 40px 40px -20px rgba(13, 48, 189, 0.15);
 }
 
 .order-card__img-box img {
@@ -81,7 +86,6 @@ body {
 .order-card__details {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1.6rem;
   padding: 4.8rem 4.8rem 4.3rem 4.8rem;
 }
@@ -105,6 +109,76 @@ body {
 
 .order-card__btn--payment {
   margin-bottom: 1.6rem;
+}
+
+.order-card__heading {
+  font-size: 2.8rem;
+  line-height: 1.35;
+  color: #1f2e55;
+  font-weight: 900;
+}
+
+.order-card__description {
+  font-size: 1.6rem;
+  line-height: 1.65;
+  color: #717fa6;
+}
+
+.order-card__plan {
+  background-color: #f7f9ff;
+  border-radius: 11px;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  font-weight: 500;
+  width: 100%;
+}
+
+.order-card__plan-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.order-card__plan-title {
+  color: #1f2e55;
+  font-weight: 900;
+}
+
+.order-card__plan-price {
+  color: #717fa6;
+  font-weight: 500;
+}
+
+.order-card__link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  line-height: 1.65;
+}
+
+.order-card__link--change {
+  color: #382ae1;
+  font-weight: 700;
+}
+
+.order-card__link--cancel {
+  color: #717fa6;
+  font-weight: 900;
+}
+
+.order-card__btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  font-weight: 900;
+  padding: 1.2rem 0;
+  border-radius: 11px;
+  cursor: pointer;
+}
+
+.order-card__btn--payment {
+  background-color: #382ae1;
+  color: #fff;
+  box-shadow: 0 20px 20px 0 rgba(57, 42, 225, 0.19);
 }
 
 /* .attribution {
