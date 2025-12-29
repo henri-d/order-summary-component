@@ -1,0 +1,63 @@
+/* --- 01 TYPOGRAPHY SYSTEM
+
+- Font Family: 
+Red Hat Display
+
+- Font sizes (px):
+15 / 16 / 22 / 28
+
+- Font weights:
+Medium: 500
+Bold: 700
+Black: 900
+
+- Line heights:
+Preset 1 & 2: 135%
+Preset 3 & 4: 165%
+
+- Letter spacing:
+0px
+
+--- 02 COLORS
+
+- Primary: 
+Purple 500: #766CF1
+
+- Blue Palette: 
+Blue 950: #1F2E55
+Blue 700: #382AE1
+Blue 150: #D6E1FF
+Blue 100: #E0E8FF
+Blue 50: #F7F9FF
+
+- Neutrals: 
+White: #FFFFFF
+Black: #000000
+Gray 600: #717FA6
+
+--- 03 WHITESPACE
+
+- Spacing system (px):
+0 / 8 / 16 / 24 / 32 / 48
+
+--- 04 SHADOWS & BORDER-RADIUS
+(Not specified in the design files provided)
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
