@@ -103,10 +103,6 @@ body {
   flex-direction: column;
 }
 
-.order-card__link--change {
-  margin-left: auto;
-}
-
 .order-card__btn--payment {
   margin-bottom: 1.6rem;
 }
@@ -149,19 +145,35 @@ body {
 }
 
 .order-card__link {
-  text-decoration: none;
   font-size: 1.6rem;
   line-height: 1.65;
 }
 
-.order-card__link--change {
+.order-card__link--change:link,
+.order-card__link--change:visited {
+  margin-left: auto;
   color: #382ae1;
   font-weight: 700;
+  transition: all 0.3s;
 }
 
-.order-card__link--cancel {
+.order-card__link--change:hover,
+.order-card__link--change:active {
+  color: #766cf1;
+  text-decoration: none;
+}
+
+.order-card__link--cancel:link,
+.order-card__link--cancel:visited {
   color: #717fa6;
   font-weight: 900;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.order-card__link--cancel:hover,
+.order-card__link--cancel:active {
+  color: #1f2e55;
 }
 
 .order-card__btn {
@@ -179,6 +191,11 @@ body {
   background-color: #382ae1;
   color: #fff;
   box-shadow: 0 20px 20px 0 rgba(57, 42, 225, 0.19);
+  transition: background-color 0.3s;
+}
+
+.order-card__btn--payment:hover {
+  background-color: #766cf1;
 }
 
 /* .attribution {
