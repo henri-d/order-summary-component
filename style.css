@@ -44,6 +44,77 @@ Gray 600: #717FA6
 (Not specified in the design files provided)
 */
 
+:root {
+  /***** COLORS *****/
+  /* Primary */
+  --color-purple-500: #766cf1;
+  /* Blue Palette */
+  --color-blue-950: #1f2e55;
+  --color-blue-700: #382ae1;
+  --color-blue-150: #d6e1ff;
+  --color-blue-100: #e0e8ff;
+  --color-blue-50: #f7f9ff;
+  /* Neutrals */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-600: #717fa6;
+
+  /***** SCALE *****/
+  --space-100: 0.8rem;
+  --space-200: 1.6rem;
+  --space-300: 2.4rem;
+  --space-400: 3.2rem;
+  --space-500: 4.8rem;
+
+  /***** SHADOWS *****/
+  --shadow-card: 0 40px 40px -20px rgba(13, 48, 189, 0.15);
+  --shadow-button: 0 20px 20px 0 rgba(57, 42, 225, 0.19);
+
+  /***** BORDER RADIUS *****/
+  --radius-card: 20px;
+  --radius-element: 11px;
+
+  /***** FONT WEIGHTS *****/
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+/* 01 TYPOGRAPHY */
+.text-preset-1 {
+  font-size: 2.8rem;
+  line-height: 1.35;
+  font-weight: var(--fw-black);
+}
+
+.text-preset-2 {
+  font-size: 2.2rem;
+  line-height: 1.35;
+  font-weight: var(--fw-black);
+}
+
+.text-preset-3 {
+  font-size: 1.6rem;
+  line-height: 1.65;
+}
+
+.text-preset-4 {
+  font-size: 1.5rem;
+  line-height: 1.65;
+}
+
+.text-preset--black {
+  font-weight: var(--fw-black);
+}
+
+.text-preset--bold {
+  font-weight: var(--fw-bold);
+}
+
+.text-preset--medium {
+  font-weight: var(--fw-medium);
+}
+
 * {
   padding: 0;
   margin: 0;
