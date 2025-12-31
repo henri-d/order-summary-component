@@ -1,51 +1,6 @@
-/* --- 01 TYPOGRAPHY SYSTEM
-
-- Font Family: 
-Red Hat Display
-
-- Font sizes (px):
-15 / 16 / 22 / 28
-
-- Font weights:
-Medium: 500
-Bold: 700
-Black: 900
-
-- Line heights:
-Preset 1 & 2: 135%
-Preset 3 & 4: 165%
-
-- Letter spacing:
-0px
-
---- 02 COLORS
-
-- Primary: 
-Purple 500: #766CF1
-
-- Blue Palette: 
-Blue 950: #1F2E55
-Blue 700: #382AE1
-Blue 150: #D6E1FF
-Blue 100: #E0E8FF
-Blue 50: #F7F9FF
-
-- Neutrals: 
-White: #FFFFFF
-Black: #000000
-Gray 600: #717FA6
-
---- 03 WHITESPACE
-
-- Spacing system (px):
-0 / 8 / 16 / 24 / 32 / 48
-
---- 04 SHADOWS & BORDER-RADIUS
-(Not specified in the design files provided)
-*/
-
+/* --- 01 DESIGN SYSTEM / VARIABLES --- */
 :root {
-  /***** COLORS *****/
+  /* --- COLORS --- */
   /* Primary */
   --color-purple-500: #766cf1;
   /* Blue Palette */
@@ -59,7 +14,7 @@ Gray 600: #717FA6
   --color-black: #000000;
   --color-gray-600: #717fa6;
 
-  /***** SCALE *****/
+  /* --- SCALE --- */
   --space-100: 0.8rem;
   --space-150: 1.2rem;
   --space-200: 1.6rem;
@@ -67,21 +22,46 @@ Gray 600: #717FA6
   --space-400: 3.2rem;
   --space-500: 4.8rem;
 
-  /***** SHADOWS *****/
+  /* --- SHADOWS --- */
   --shadow-card: 0 40px 40px -20px rgba(13, 48, 189, 0.15);
   --shadow-button: 0 20px 20px 0 rgba(57, 42, 225, 0.19);
 
-  /***** BORDER RADIUS *****/
+  /* --- BORDER RADIUS --- */
   --radius-card: 20px;
   --radius-element: 11px;
 
-  /***** FONT WEIGHTS *****/
+  /* --- FONT WEIGHTS --- */
   --fw-medium: 500;
   --fw-bold: 700;
   --fw-black: 900;
 }
 
-/* 01 TYPOGRAPHY */
+/* --- 02 BASE STYLES --- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--color-blue-100) url(img/pattern-background-desktop.svg);
+  background-position: top;
+  background-repeat: repeat-x;
+  min-height: 100vh;
+  padding: var(--space-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-400);
+  font-family: "Red Hat Display", sans-serif;
+}
+
+/* --- 03 TYPOGRAPHY PRESETS --- */
 .text-preset-1 {
   font-size: 2.8rem;
   line-height: 1.35;
@@ -116,29 +96,9 @@ Gray 600: #717FA6
   font-weight: var(--fw-medium);
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+/* --- 04 ORDER CARD COMPONENT --- */
 
-html {
-  font-size: 62.5%;
-}
-
-body {
-  background: var(--color-blue-100) url(img/pattern-background-desktop.svg);
-  background-position: top;
-  background-repeat: repeat-x;
-  min-height: 100vh;
-  padding: var(--space-200);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: "Red Hat Display", sans-serif;
-}
-
+/* The Main Container */
 .order-card {
   background-color: var(--color-white);
   max-width: 45rem;
@@ -152,10 +112,12 @@ body {
   color: var(--color-gray-600);
 }
 
+/* 1. Hero Image */
 .order-card__img-box img {
   width: 100%;
 }
 
+/* 2. Content Container */
 .order-card__details {
   display: flex;
   flex-direction: column;
@@ -163,6 +125,12 @@ body {
   padding: var(--space-500);
 }
 
+/* 3. Heading */
+.order-card__heading {
+  color: var(--color-blue-950);
+}
+
+/* 4. Plan Selection Box */
 .order-card__plan {
   display: flex;
   align-items: center;
@@ -179,16 +147,12 @@ body {
   height: var(--space-500);
 }
 
-.order-card__plan-type {
-  color: var(--color-blue-950);
-}
-
 .order-card__plan-info {
   display: flex;
   flex-direction: column;
 }
 
-.order-card__heading {
+.order-card__plan-type {
   color: var(--color-blue-950);
 }
 
@@ -197,7 +161,7 @@ body {
   margin-left: auto;
   color: var(--color-blue-700);
   font-weight: var(--fw-bold);
-  transition: color text-decoration 0.3s;
+  transition: color 0.3s;
   border-radius: var(--radius-element);
 }
 
@@ -207,21 +171,7 @@ body {
   text-decoration: none;
 }
 
-.order-card__link--cancel:link,
-.order-card__link--cancel:visited {
-  color: inherit;
-  font-weight: var(--fw-black);
-  text-decoration: none;
-  transition: color 0.3s;
-  align-self: center;
-  border-radius: var(--radius-element);
-}
-
-.order-card__link--cancel:hover,
-.order-card__link--cancel:active {
-  color: var(--color-blue-950);
-}
-
+/* 5. Payment Button */
 .order-card__btn {
   background: none;
   border: none;
@@ -244,6 +194,23 @@ body {
   background-color: var(--color-purple-500);
 }
 
+/* 6. Cancel Link */
+.order-card__link--cancel:link,
+.order-card__link--cancel:visited {
+  color: inherit;
+  font-weight: var(--fw-black);
+  text-decoration: none;
+  transition: color 0.3s;
+  align-self: center;
+  border-radius: var(--radius-element);
+}
+
+.order-card__link--cancel:hover,
+.order-card__link--cancel:active {
+  color: var(--color-blue-950);
+}
+
+/* 7. Focus States */
 .order-card__btn:focus-visible,
 .order-card__link--change:focus-visible,
 .order-card__link--cancel:focus-visible {
@@ -251,6 +218,48 @@ body {
   outline-offset: 4px;
 }
 
+.attribution__link:focus-visible {
+  outline: 2px solid var(--color-purple-500);
+}
+
+/* 05 MISCELLANEOUS */
+.attribution {
+  color: var(--color-blue-950);
+}
+
+.attribution__link:link,
+.attribution__link:visited {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+  border-radius: var(--radius-element);
+  padding: 0 1px;
+}
+
+.attribution__link:hover,
+.attribution__link:active {
+  text-decoration: underline;
+  color: var(--color-purple-500);
+}
+
+.attribution__heart {
+  display: inline-block;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* --- 06 RESPONSIVE QUERIES --- */
 @media (max-width: 26em) {
   .order-card__plan {
     padding: var(--space-200);
@@ -273,11 +282,3 @@ body {
     font-size: 1.5rem;
   }
 }
-
-/* .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-} */
