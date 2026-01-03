@@ -11,7 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
 
     <title>Order summary card</title>
   </head>
@@ -21,12 +26,14 @@
         <div class="order-card__img-box">
           <img src="img/illustration-hero.svg" alt="" aria-hidden="true" />
         </div>
-        <div class="order-card__details text-preset-3">
-          <h1 class="order-card__heading text-preset-1">Order Summary</h1>
-          <p>
-            You can now listen to millions of songs, audiobooks, and podcasts on
-            any device anywhere you like!
-          </p>
+        <div class="order-card__details text-preset-3 text-preset--medium">
+          <div>
+            <h1 class="order-card__heading text-preset-1">Order Summary</h1>
+            <p>
+              You can now listen to millions of songs, audiobooks, and podcasts
+              on any device anywhere you like!
+            </p>
+          </div>
           <div class="order-card__plan">
             <img
               class="order-card__plan-icon"
@@ -34,18 +41,28 @@
               alt=""
               aria-hidden="true"
             />
-            <div class="order-card__plan-info text-preset-3">
+            <div class="order-card__plan-info">
               <span class="order-card__plan-type text-preset--black"
                 >Annual Plan</span
               >
               <span>$59.99/year</span>
             </div>
-            <a class="order-card__link--change" href="#">Change</a>
+            <a
+              class="order-card__link order-card__link--change text-preset--bold"
+              href="#"
+              >Change</a
+            >
           </div>
-          <button class="order-card__btn order-card__btn--payment">
+          <button
+            class="order-card__btn order-card__btn--payment text-preset-3 text-preset--black"
+          >
             Proceed to Payment
           </button>
-          <a class="order-card__link--cancel" href="#">Cancel Order</a>
+          <a
+            class="order-card__link order-card__link--cancel text-preset--black"
+            href="#"
+            >Cancel Order</a
+          >
         </div>
       </article>
     </main>

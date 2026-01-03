@@ -6,7 +6,6 @@
   /* Blue Palette */
   --color-blue-950: #1f2e55;
   --color-blue-700: #382ae1;
-  --color-blue-150: #d6e1ff; /* unused */
   --color-blue-100: #e0e8ff;
   --color-blue-50: #f7f9ff;
   /* Neutrals */
@@ -31,7 +30,7 @@
   --radius-element: 11px;
 
   /* --- FONT WEIGHTS --- */
-  --fw-medium: 500;
+  --fw-medium: 600;
   --fw-bold: 700;
   --fw-black: 900;
 }
@@ -115,6 +114,7 @@ body {
 /* 1. Hero Image */
 .order-card__img-box img {
   width: 100%;
+  display: block;
 }
 
 /* 2. Content Container */
@@ -128,6 +128,7 @@ body {
 /* 3. Heading */
 .order-card__heading {
   color: var(--color-blue-950);
+  margin-bottom: var(--space-200);
 }
 
 /* 4. Plan Selection Box */
@@ -156,30 +157,32 @@ body {
   color: var(--color-blue-950);
 }
 
+.order-card__link:link,
+.order-card__link:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
 .order-card__link--change:link,
 .order-card__link--change:visited {
   margin-left: auto;
   color: var(--color-blue-700);
-  font-weight: var(--fw-bold);
-  transition: color 0.3s;
-  border-radius: var(--radius-element);
 }
 
 .order-card__link--change:hover,
 .order-card__link--change:active {
   color: var(--color-purple-500);
-  text-decoration: none;
 }
 
 /* 5. Payment Button */
 .order-card__btn {
   background: none;
   border: none;
-  font-size: var(--space-200);
-  font-weight: var(--fw-black);
   padding: var(--space-150) 0;
   border-radius: var(--radius-element);
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .order-card__btn--payment {
@@ -187,7 +190,6 @@ body {
   background-color: var(--color-blue-700);
   color: var(--color-white);
   box-shadow: var(--shadow-button);
-  transition: background-color 0.3s;
 }
 
 .order-card__btn--payment:hover {
@@ -197,12 +199,7 @@ body {
 /* 6. Cancel Link */
 .order-card__link--cancel:link,
 .order-card__link--cancel:visited {
-  color: inherit;
-  font-weight: var(--fw-black);
-  text-decoration: none;
-  transition: color 0.3s;
   align-self: center;
-  border-radius: var(--radius-element);
 }
 
 .order-card__link--cancel:hover,
@@ -211,15 +208,14 @@ body {
 }
 
 /* 7. Focus States */
-.order-card__btn:focus-visible,
-.order-card__link--change:focus-visible,
-.order-card__link--cancel:focus-visible {
-  outline: 3px solid var(--color-purple-500);
-  outline-offset: 4px;
+*:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(57, 42, 225, 0.5);
 }
 
-.attribution__link:focus-visible {
-  outline: 2px solid var(--color-purple-500);
+/* Prevent 'slide up' on transition */
+.order-card__btn:focus-visible {
+  box-shadow: var(--shadow-button), 0 0 0 0.8rem rgba(57, 42, 225, 0.5);
 }
 
 /* 05 MISCELLANEOUS */
@@ -231,14 +227,12 @@ body {
 .attribution__link:visited {
   text-decoration: none;
   color: inherit;
-  transition: color 0.3s;
-  border-radius: var(--radius-element);
+  transition: all 0.3s;
   padding: 0 1px;
 }
 
 .attribution__link:hover,
 .attribution__link:active {
-  text-decoration: underline;
   color: var(--color-purple-500);
 }
 
@@ -276,7 +270,9 @@ body {
   }
 
   .order-card__details {
+    gap: var(--space-300);
     padding: var(--space-300);
+    padding-top: var(--space-400);
   }
 
   .order-card__plan {
